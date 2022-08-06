@@ -39,7 +39,7 @@ public class JZ24 {
     public static ListNode ReverseList2(ListNode head) {
         if (head == null) {
             return null;
-        }//////////////////////////////////////////.a
+        }
 
         Stack<ListNode> stack = new Stack<>();
         while (head != null) {
@@ -48,7 +48,6 @@ public class JZ24 {
         }
         ListNode listNode = stack.pop();
         ListNode ans = listNode;
-        listNode.next = null;
         while (!stack.isEmpty()) {
             ListNode tempNode = stack.pop();
             tempNode.next = null;
