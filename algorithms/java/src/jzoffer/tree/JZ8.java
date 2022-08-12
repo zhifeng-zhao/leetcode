@@ -8,6 +8,7 @@ package jzoffer.tree;
  */
 public class JZ8 {
     public TreeLinkNode GetNext(TreeLinkNode pNode) {
+        // 右节点是否为空，遍历右节点下最左节点
         if (pNode.right != null) {
             TreeLinkNode node = pNode.right;
             while (node.left != null) {
@@ -17,6 +18,7 @@ public class JZ8 {
         } else {
             while (pNode.next != null) {
                 TreeLinkNode parent = pNode.next;
+                // 父节点的左节点等于当前节点
                 if (parent.left == pNode) {
                     return parent;
                 }
