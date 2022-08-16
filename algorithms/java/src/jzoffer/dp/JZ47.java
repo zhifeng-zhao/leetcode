@@ -12,7 +12,7 @@ public class JZ47 {
             return 0;
         }
         int n = grid[0].length;
-        int dp[] = new int[n];
+        int[] dp = new int[n];
         for (int[] ints : grid) {
             dp[0] += ints[0];
             // 逐层遍历，比较向下或向右的的值
