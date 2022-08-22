@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 /**
  * 23. 合并K个升序链表
- *
+ * 优先级队列（二叉堆）
  * @author zzf
  * @date 2022/8/22 10:16 下午
  */
