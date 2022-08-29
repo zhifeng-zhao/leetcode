@@ -21,7 +21,7 @@ public class hot08 {
         while (index < chars.length && chars[index] <= '9' && chars[index] >= '0') {
             int dight = chars[index++] - '0';
             // 校验是否溢出
-            if (ans > (Integer.MIN_VALUE - dight) / 10) {
+            if (ans > (Integer.MAX_VALUE - dight) / 10) {
                 return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
             ans = ans * 10 + dight;
