@@ -18,7 +18,7 @@ public class hot04 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         add(nums1);
         add(nums2);
-        if (left.isEmpty() || right.isEmpty()) {
+        if (left.isEmpty() && right.isEmpty()) {
             return 0;
         }
         if (num % 2 == 0) {
