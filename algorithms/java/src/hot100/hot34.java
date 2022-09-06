@@ -6,7 +6,7 @@ package hot100;
  * @author zzf
  * @date 2022/9/6 9:17 下午
  */
-public class java34 {
+public class hot34 {
     public int[] searchRange(int[] nums, int target) {
         return new int[]{left(nums, target), right(nums, target)};
     }
