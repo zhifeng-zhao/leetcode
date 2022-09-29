@@ -36,4 +36,34 @@ public class hot59 {
         }
         return res;
     }
+
+    public int[][] generateMatrix2(int n) {
+        int[][] res = new int[n][n];
+        // 循环次数
+        int loop = 0;
+        // 循环开始位置
+        int start = 0;
+        int count = 1;
+        int i, j;
+        while (loop++ < n / 2) {
+            for (j = start; j < n - loop; j++) {
+                res[start][j] = count++;
+            }
+            for (i = start; i < n - loop; i++) {
+                res[i][j] = count++;
+            }
+            for (; j >= loop; j--) {
+                res[i][j] = count++;
+            }
+            for (; i >= loop; i--) {
+                res[i][j] = count++;
+            }
+            start++;
+        }
+        // 如果n为奇数，单独给矩阵中间位置赋值
+        if (n % 2 == 1) {
+            res[start][start] = count;
+        }
+        return res;
+    }
 }
