@@ -50,4 +50,25 @@ public class JZ58 {
         s[a] = s[b];
         s[b] = temp;
     }
+
+    public String reverseLeftWords(String s, int n) {
+        StringBuilder sb = new StringBuilder(s);
+        // 反转前n个
+        reverseString(sb, 0, n - 1);
+        // 反转n后的字符串
+        reverseString(sb, n, sb.length() - 1);
+        // 反转字符串
+        reverseString(sb, 0, sb.length() - 1);
+        return sb.toString();
+    }
+
+    private void reverseString(StringBuilder sb, int start, int end) {
+        while (start < end) {
+            char temp = sb.charAt(start);
+            sb.setCharAt(start, sb.charAt(end));
+            sb.setCharAt(end, temp);
+            start++;
+            end--;
+        }
+    }
 }
